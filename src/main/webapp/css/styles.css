@@ -124,13 +124,3 @@ input.with--error {border: var(--error) solid 3px }
     box-shadow: 1px 2px 3px rgba(0,0,0,.5);
     padding: 20px 40px;
 }
-
-#lessaland-ee {
-    animation: up 1s ease-in;
-}
-
-@keyframes up {
-  from {transform: translateX(-800px) rotate(-100deg);}
- to{transform: translateX(800px) rotate(100deg);}
-
-}

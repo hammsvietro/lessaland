@@ -40,14 +40,6 @@ const getCityDetails = (city) => ajaxJson(`http://localhost:8080/api/endereco?ci
 const doRenderMethod = (show) => show ? 'show' : 'hide';
 const userCard = (info) => ` <div class="card"> <span>${info.id}</span> <span>${info.nome}</span> </div>`
 const hasResults = (res) => !!res.clientes.length;
-const showLessaLand = () => rxjs.of(null)
-    .pipe(
-        rxjs.tap(() => $("#lessaland-ee").show()),
-        rxjs.mergeMap(() => rxjs.timer(1000)),
-        rxjs.tap(() => $("#lessaland-ee").hide())
-    ).subscribe();
-
-
 
 from(documentReady$)
     .pipe(
@@ -57,7 +49,6 @@ from(documentReady$)
         removeErrors(),
         lengthValidator(),
         numberValidator(),
-        rxjs.tap(event => event.target.value === 'lessaland' && showLessaLand()),
         rxjs.mergeMap(event => getCityDetails(event.target.value))
     ).subscribe(res => {
         $('div.card').remove();

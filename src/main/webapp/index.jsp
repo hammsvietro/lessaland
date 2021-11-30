@@ -10,7 +10,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet" />
-    <link rel="shortcut icon" type="image/x-icon" href="static/lessaland.png"/>
 </head>
 <body>
     <main class="main">
@@ -37,7 +36,6 @@
                 </div>
             </div>
             <h2 id="no-results" style="display: none;">Nada foi encontrado</h2>
-            <img id="lessaland-ee" style="display: none;" src="static/lessaland.png">
         </div>
     </main>
 </body>
