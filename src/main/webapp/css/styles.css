@@ -1,0 +1,136 @@
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video { margin:0; padding:0; border:0; outline:0; font-size:100%; vertical-align:baseline; background:transparent; } body { line-height:1; } article,aside,details,figcaption,figure, footer,header,hgroup,menu,nav,section { display:block; } nav ul { list-style:none; } blockquote, q { quotes:none; } blockquote:before, blockquote:after, q:before, q:after { content:''; content:none; } a { margin:0; padding:0; font-size:100%; vertical-align:baseline; background:transparent; }
+
+:root {
+    --primary: #700B97;
+    --secondary: #BD1550;
+    --bg: #222831;
+    --surface: #393E46;
+    --error : #cc0000;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    min-height: 100vh;
+    width: 100vw;
+    background-color: #121212;
+    color: #fff;
+}
+
+div {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+h2 {
+    font-size: 25px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    background-color: var(--secondary);
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-around;
+    padding: 10px 0;
+}
+
+a {
+    text-decoration: inherit;
+    color: inherit;
+    cursor: pointer;
+    height: 100%;
+    font-size: 20px;
+}
+
+a:not(:last-child) {
+    margin-right: 5px;
+}
+
+.main-wrapper {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+input {
+    border-style: none;
+    border-radius: 12px;
+    padding: 8px;
+    height: 40px;
+    width: 300px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+input:focus { outline: none; }
+input.with--error {border: var(--error) solid 3px }
+
+.input-wrapper {
+    height: 150px;
+}
+
+.error-section {
+    text-align: center;
+    color: var(--error);
+    padding-top: 10px;
+    margin-bottom: 10px;
+}
+
+.error > p:not(:first-child) {
+   margin-top: 10px;
+}
+
+.client-wrapper {
+    background-color: var(--surface);
+    padding: 30px 20px;
+    border-radius: 10px;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.client-wrapper > div {
+    margin: 5px 10px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.indicator {
+    padding: 0 40px 10px;
+}
+
+.indicator > h4 {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.uf-indicator {
+    padding-bottom: 20px;
+}
+
+.card {
+    box-shadow: 1px 2px 3px rgba(0,0,0,.5);
+    padding: 20px 40px;
+}
+
+#lessaland-ee {
+    animation: up 1s ease-in;
+}
+
+@keyframes up {
+  from {transform: translateX(-800px) rotate(-100deg);}
+ to{transform: translateX(800px) rotate(100deg);}
+
+}
